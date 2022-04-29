@@ -63,6 +63,21 @@ let searchBar = (e) => {
   }
   weatherFunction(currentCity);
 }
+// Grabs search history from local storage and displays it
+let cityFunction = () => {
+
+  let cities = JSON.parse(localStorage.getItem('results'));
+  if (!cities) cities = [];
+  $(cityResults).text("");
+  for (var i = 0; i < cities.length; i++) {
+
+    var but1 = document.createElement("button");
+    $(but1).text(cities[i]);
+    but1.setAttribute("data-index", i);
+    cityResults.appendChild(but1);
+
+  }
+}
 //-----End Of Search Bar-----//
 
 
