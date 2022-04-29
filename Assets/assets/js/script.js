@@ -114,6 +114,13 @@ let weatherFunction = (searchCity) => {
         } else if (oneCallData.current.uvi >= 8) {
           mainUv.classList.add('uvRed');
         }
+        
+          // 1st Next Day
+          $(day1Date).text(moment().add(1, 'day').format("MM/DD/YYYY"));
+          day1Icon.src = "http://openweathermap.org/img/w/" + oneCallData.daily[0].weather[0].icon + ".png";
+          $(day1Temp).text(`Temp: ${oneCallData.daily[0].temp.day} F`);
+          $(day1Wind).text(`Wind Speed: ${oneCallData.daily[0].wind_speed} mph`);
+          $(day1Humid).text(`Humidity: ${oneCallData.daily[0].humidity} %`);
       })
       
     })
