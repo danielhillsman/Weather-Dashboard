@@ -1,0 +1,109 @@
+.uvBlue{
+  background-color: blue;
+  color: white;
+ }
+.uvYellow{
+  background-color: yellow;
+  color: black;
+}
+.uvRed{
+  background-color: red;
+}
+body{
+  background-image:url('../images/Jim-Reed-Rainbow-020.jpg');
+  background-size: cover;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --w: #fff;
+}
+hr:not([size]) {
+  height: 0px;
+}
+header h2{
+  text-align: center;
+  margin-top: 1.4rem;
+  text-decoration: underline;
+  font-size: 10vh;
+}
+#cityResults button{
+  width: 100%;
+  padding: .3rem;
+  margin-top:.7rem ;
+  background-color: rgba(26, 243, 243, 0.178);
+}
+#weather-results{
+  margin-right: 2rem;
+}
+#search-div{
+  padding: 2vh;
+  border: 1vh rgba(38, 58, 110, 0.315) solid;
+  background-color: #526ca0a4;
+}
+#cityName{
+  text-decoration: underline;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+#containerBody{
+  position: relative;
+}
+.mainCard{
+  font-size: 3vh;
+  font-weight: bold;
+  max-width: 100vh;
+}
+.card-body{
+  padding: 0;
+}
+img#mainIcon {
+  height: 65px;
+  width: 70px;
+  position: absolute;
+  top: 3rem;
+  right: 36rem;
+  outline: none;
+  border: none;
+}
+img{
+  display: none;
+}
+img[src]{
+ display: block;
+}
+.btn-primary{
+  background-color: rgba(77, 118, 231, 0.726);
+}
+#fivedayForecast .column {
+  float: left;
+  width: 18%;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+#fivedayForecast #day1Icon, #day2Icon, #day3Icon, #day4Icon, #day5Icon{
+  height: 50px;
+  width: 50px;
+}
+#fivedayForecast .row {margin: 0 -5px;}
+/* Clear floats after the columns */
+#fivedayForecast .row:after {
+content: "";
+display: table;
+clear: both;
+}
+#fivedayForecast .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  line-height: 3rem;
+  height: 25rem;
+  color: black;
+  opacity: .8;
+  /* text-align: center; */
+  background-color: #f1f1f1;
+}
