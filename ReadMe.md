@@ -8,6 +8,7 @@
   
   ## Table of Contents
   
+  * [Description](#description)
   * [Links](#links)
   * [Installation](#installation)
   * [Usage](#usage)
