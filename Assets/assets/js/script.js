@@ -39,7 +39,7 @@ let day5Humid = $('#day5Humid')[0];
 
 
 
-// -----Search Bar-----//
+// -----Search Bar Function-----//
 
 // Saves Search to local storage 
 let saveCity = (nextCity) => {
@@ -53,7 +53,7 @@ let saveCity = (nextCity) => {
   localStorage.setItem('results', JSON.stringify(searchHistory))
   cityFunction()
 }
-// Search Bar function
+// Search Bar
 let searchBar = (e) => {
   e.preventDefault();
   currentCity = userInput.value;
@@ -77,8 +77,9 @@ let cityFunction = () => {
     cityResults.appendChild(but1);
 
   }
-}
-//-----End Of Search Bar-----//
+} // returns History when page is rereshed
+cityFunction()
+//-----End Of Search Bar Function-----//
 
 
 submitBtn.addEventListener('click', searchBar);
