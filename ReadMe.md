@@ -25,9 +25,7 @@
   ````
   NO INSTALLATION NEEDED
   ````
-
-    
-  ## Usage
+  ## Technology Used
   
   ***HTML***, ***CSS***, ***Javascript***, and ***jQuery***
   
