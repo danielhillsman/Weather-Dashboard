@@ -39,7 +39,20 @@ let day5Humid = $('#day5Humid')[0];
 
 
 
+// -----Search Bar-----//
 
+// Saves Search to local storage 
+let saveCity = (nextCity) => {
+  let cities = JSON.parse(localStorage.getItem("results"));
+  if (cities === null) {
+    searchHistory = [];
+  } else {
+    searchHistory = cities;
+  }
+  searchHistory.push(nextCity);
+  localStorage.setItem('results', JSON.stringify(searchHistory))
+  cityFunction()
+}
 // Search Bar function
 let searchBar = (e) => {
   e.preventDefault();
@@ -50,8 +63,7 @@ let searchBar = (e) => {
   }
   weatherFunction(currentCity);
 }
-
-
+//-----End Of Search Bar-----//
 
 
 submitBtn.addEventListener('click', searchBar);
