@@ -94,7 +94,27 @@ let weatherFunction = (searchCity) => {
       let lonCoord = data.coord.lon
       saveCity(currentCity)
       fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latCoord}&lon=${lonCoord}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`)
-    
+      .then(response => response.json())
+      .then((oneCallData) => {
+        // displaying the info on the page 
+        $(cityName).text(displayName);
+        mainIcon.src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        $(mainDate).text(`Date: ${moment().format("MM/DD/YYYY")}`);
+        $(mainTemp).text(`Temp: ${oneCallData.current.temp} F`);
+        $(mainHumid).text(`Humidity: ${oneCallData.current.humidity} %`);
+        $(mainWind).text(`Wind Speed: ${oneCallData.current.wind_speed} mph`);
+        $(mainUv).text(`UVI Index: ${oneCallData.current.uvi}`);
+        mainUv.removeAttribute("class");
+        // UV color function
+        if (oneCallData.current.uvi >= 0 && oneCallData.current.uvi < 3) {
+          mainUv.classList.add('uvBlue');
+        } else if (oneCallData.current.uvi >= 4 && oneCallData.current.uvi < 8) {
+          mainUv.classList.add('uvYellow');
+        } else if (oneCallData.current.uvi >= 8) {
+          mainUv.classList.add('uvRed');
+        }
+      })
+      
     })
     .catch((error) => {
       console.error(error)
