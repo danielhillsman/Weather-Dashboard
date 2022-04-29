@@ -27,7 +27,9 @@
 
     
   ## Usage
+  ````
   ***HTML***, ***CSS***, ***Javascript***, and ***jQuery***
+  ````
 
   ## Questions?
 
