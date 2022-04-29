@@ -40,5 +40,18 @@ let day5Humid = $('#day5Humid')[0];
 
 
 
+// Search Bar function
+let searchBar = (e) => {
+  e.preventDefault();
+  currentCity = userInput.value;
+  if (currentCity === '' || currentCity === null) {
+    console.log('Must use city a name!')
+    return false;
+  }
+  weatherFunction(currentCity);
+}
+
+
+
 
 submitBtn.addEventListener('click', searchBar);
