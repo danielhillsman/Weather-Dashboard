@@ -5,10 +5,10 @@
   ![license](https://img.shields.io/static/v1?label=license&message=LABD&color=success)
   
   ## Description
+  An application to be able to find and display the current weather by city. Along with displaying that city's forecast up to 5 days ahead.
   
   ## Table of Contents
-  
-  * [Description](#description)
+ 
   * [Links](#links)
   * [Installation](#installation)
   * [Usage](#usage)
