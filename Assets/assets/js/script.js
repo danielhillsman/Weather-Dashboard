@@ -92,6 +92,7 @@ let weatherFunction = (searchCity) => {
     .then((data) => {
       let latCoord = data.coord.lat
       let lonCoord = data.coord.lon
+      let displayName = data.name
       saveCity(currentCity)
       fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latCoord}&lon=${lonCoord}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`)
       .then(response => response.json())
