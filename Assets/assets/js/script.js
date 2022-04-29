@@ -81,5 +81,24 @@ let cityFunction = () => {
 cityFunction()
 //-----End Of Search Bar Function-----//
 
+// API Key
+const apiKey = "9e2e3f847b172f233503288a97eb4446";
+//----Weather Function----//
+let weatherFunction = (searchCity) => {
+  // Calling API Key
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&APPID=${apiKey}&units=imperial`;
+  // Fetch Function to grab the data from the API and display it in HTML
+  fetch(apiUrl).then(res => res.json())
+    .then((data) => {
+      let latCoord = data.coord.lat
+      let lonCoord = data.coord.lon
+      saveCity(currentCity)
+      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latCoord}&lon=${lonCoord}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`)
+    
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}
 
 submitBtn.addEventListener('click', searchBar);
