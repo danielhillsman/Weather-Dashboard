@@ -121,6 +121,30 @@ let weatherFunction = (searchCity) => {
           $(day1Temp).text(`Temp: ${oneCallData.daily[0].temp.day} F`);
           $(day1Wind).text(`Wind Speed: ${oneCallData.daily[0].wind_speed} mph`);
           $(day1Humid).text(`Humidity: ${oneCallData.daily[0].humidity} %`);
+          // 2nd Next Day
+          $(day2Date).text(moment().add(2, 'day').format("MM/DD/YYYY"));
+          day2Icon.src = "http://openweathermap.org/img/w/" + oneCallData.daily[1].weather[0].icon + ".png";
+          $(day2Temp).text(`Temp: ${oneCallData.daily[1].temp.day} F`);
+          $(day2Wind).text(`Wind Speed: ${oneCallData.daily[1].wind_speed} mph`);
+          $(day2Humid).text(`Humidity: ${oneCallData.daily[1].humidity} %`);
+          // 3rd Next Day
+          $(day3Date).text(moment().add(3, 'day').format("MM/DD/YYYY"));
+          day3Icon.src = "http://openweathermap.org/img/w/" + oneCallData.daily[2].weather[0].icon + ".png";
+          $(day3Temp).text(`Temp: ${oneCallData.daily[2].temp.day} F`);
+          $(day3Wind).text(`Wind Speed: ${oneCallData.daily[2].wind_speed} mph`);
+          $(day3Humid).text(`Humidity: ${oneCallData.daily[2].humidity} %`);
+          // 4th Next Day
+          $(day4Date).text(moment().add(4, 'day').format("MM/DD/YYYY"));
+            day4Icon.src = "http://openweathermap.org/img/w/" + oneCallData.daily[3].weather[0].icon + ".png";
+          $(day4Temp).text(`Temp: ${oneCallData.daily[3].temp.day} F`);
+          $(day4Wind).text(`Wind Speed: ${oneCallData.daily[3].wind_speed} mph`);
+          $(day4Humid).text(`Humidity: ${oneCallData.daily[3].humidity} %`);
+          // 5th Next Day
+          $(day5Date).text(moment().add(5, 'day').format("MM/DD/YYYY"));
+          day5Icon.src = "http://openweathermap.org/img/w/" + oneCallData.daily[4].weather[0].icon + ".png";
+          $(day5Temp).text(`Temp: ${oneCallData.daily[4].temp.day} F`);
+          $(day5Wind).text(`Wind Speed: ${oneCallData.daily[4].wind_speed} mph`);
+          $(day5Humid).text(`Humidity: ${oneCallData.daily[4].humidity} %`);
       })
       
     })
